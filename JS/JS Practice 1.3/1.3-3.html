@@ -1,0 +1,26 @@
+<!-- 3. Create an array of objects and write code to sort the objects based on a specific
+property (e.g., name, age, etc.). -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let people = [  { name: "John", age: 28 }, 
+ { name: "Jane", age: 32 }, 
+  { name: "Jim", age: 25 }, 
+   { name: "Joan", age: 31 },];
+
+people.sort((a, b) => a.age - b.age);
+
+console.log(people);
+    </script>
+</body>
+</html>

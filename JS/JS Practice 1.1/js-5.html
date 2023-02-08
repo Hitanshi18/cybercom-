@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      #image1{
+        width: 300px;
+        height: 200px;
+        padding: 20px;
+      }
+
+      #image2{
+        width: 300px;
+        height: 200px;
+        padding: 20px;
+      }
+
+      button{
+        padding: 6px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+      }
+    </style>
+</head>
+<script>
+    function changeImage(id, src) {
+      document.getElementById(id).src = src;
+    }
+  </script>
+<body>
+    <img id="image1" src= "E:\Cybercom\JS\JS Practice 1.1\img1.jpg" />
+    <img id="image2" src= "E:\Cybercom\JS\JS Practice 1.1\img2.jpg" />
+    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="changeImage('image1', 'new_image1.jpg');">Change Image 1</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="changeImage('image2', 'E:\Cybercom\JS\JS Practice 1.1\img4.jpg');">Change Image 2</button>
+    
+</body>
+</html>

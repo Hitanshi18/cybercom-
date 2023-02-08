@@ -1,0 +1,24 @@
+<!-- Write a function that takes two arrays as arguments and returns a new array that -->
+combines the elements of both arrays, removing any duplicates.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+let arr1 = ['A', 'B', 'A', 'C', 'B'];
+let arr2 = ['C', 'V', 'P', 'C', 'L'];
+
+function combineAndRemoveDuplicates(arr1, arr2) {
+  return Array.from(new Set([...arr1, ...arr2]));
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!-- Create a form with input fields and a submit button. Use JavaScript to validate the form
+data and display error messages if any of the fields are invalid. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 1.2(4)</title>
+
+    <style>
+        .container{
+            background-color: rgb(219, 168, 168);
+            width: 500px;
+            padding: 20px;
+            text-align: justify;
+            color: black;
+        }
+
+        button{
+            border-radius: 30%;
+            padding: 5px;
+        }
+
+        input,label{
+            line-height: 1.5px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- <center>
+    <div class="main">
+        <div class="container">
+    <form name="Registration form"  onsubmit="return validateForm()" method="post">
+        <h3><center><b>Registration form</b></center></h3>
+
+        <label for="Username">Username :</label>
+        <input type="text">
+        <br>
+        <br>
+
+        <label for="E-mail">E-mail :</label>
+        <input type="E-mail">
+        <br>
+        <br>
+
+        <label for="Password">Password :</label>
+        <input type="Password" minlength="8">
+        <br>
+        <br>
+
+        <label for="Re-type password">Re-type password :</label>
+        <input type="Password">
+        <br>
+        <br>
+
+        <label for="Contact no.:">Contact no.:</label>
+        <input type="text">
+        <br>
+        <br>
+
+        <center><button value="Submit">Submit</button></center>
+    </form>
+</div>
+</div>
+</center> -->
+
+<center>
+    <div class="main">
+    <div class="container">
+<form id="myForm">
+    <h3><center><b>Registration form</b></center></h3>
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <span id="nameError" class="error"></span>
+    </div>
+    <br>
+
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      <span id="emailError" class="error"></span>
+    </div>
+    <br>
+
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required minlength="6">
+      <span id="passwordError" class="error"></span>
+    </div>
+    <br>
+    <br>
+
+    <center><button type="submit">Submit</button></center>
+  </form>
+  
+  
+  <script>
+    const form = document.getElementById("myForm");
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const passwordError = document.getElementById("passwordError");
+  
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+      if (name.value === "") {
+        nameError.textContent = "Name is required";
+        name.focus();
+      } else {
+        nameError.textContent = "";
+      }
+  
+      if (email.value === "") {
+        emailError.textContent = "Email is required";
+        email.focus();
+      } else {
+        emailError.textContent = "";
+      }
+  
+      if (password.value === "") {
+        passwordError.textContent = "Password is required";
+        password.focus();
+      } else if (password.value.length < 6) {
+        passwordError.textContent = "Password must be at least 6 characters long";
+        password.focus();
+      } else {
+        passwordError.textContent = "";
+      }
+    });
+  </script>
+  </div>
+</div>
+  </center>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- Create a webpage with a list of items. Use JavaScript to add or remove items from the
+list. -->
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+ 
+    <style>
+        #candidate {
+            
+            border-color: rgb(10, 11, 11);
+            box-sizing: border-box;
+        }
+         
+        .buttonClass {
+            border-radius: 90%;
+            border-color: rgb(83, 92, 92);
+            border-style: solid;
+        }
+         
+        button:hover {
+            background-color: rgb(231, 232, 160);
+        }
+    </style>
+</head>
+ 
+<body>
+    <ul id="list"></ul>
+ 
+    <input type="text" id="candidate" />
+    <button onclick="addItem()" class="buttonClass">
+    Add item</button>
+    <button onclick="removeItem()" class="buttonClass">
+    Remove item</button>
+ 
+    <script>
+        function addItem() {
+            var a = document.getElementById("list");
+            var candidate = document.getElementById("candidate");
+            var li = document.createElement("li");
+            li.setAttribute('id', candidate.value);
+            li.appendChild(document.createTextNode(candidate.value));
+            a.appendChild(li);
+        }
+        
+        function removeItem() {
+            var a = document.getElementById("list");
+            var candidate = document.getElementById("candidate");
+            var item = document.getElementById(candidate.value);
+            a.removeChild(item);
+        }
+    </script>
+</body>
+ 
+</html>

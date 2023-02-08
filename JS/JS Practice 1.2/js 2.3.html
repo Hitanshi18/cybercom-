@@ -1,0 +1,77 @@
+<!-- Create an array of objects to store information about multiple people or products. Write code to loop through the array and display the information for each object. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var people = [
+  {
+    firstName: "Hitanshi",
+    lastName: "Shah",
+    age: 21,
+    address: "shivranjini, ahmedabad"
+  },
+  {
+    firstName: "Jency ",
+    lastName: "shah",
+    age: 21,
+    address: "paldi, ahmedabad"
+  }, {
+    firstName: "Vishwa",
+    lastName: "Sutariya",
+    age: 21,
+    address: "vastrapur, ahmedabad"
+  }, {
+    firstName: "Hiren",
+    lastName: "khunt",
+    age: 21,
+    address: "Thaltej, ahmedabad"
+  },
+  
+
+];
+for (var i = 0; i < people.length; i++) {
+    console.log("First name: " + people[i].firstName);
+    console.log("Last name: " + people[i].lastName);
+    console.log("Age: " + people[i].age);
+    console.log("Address: " + people[i].address);
+    console.log("\n");
+}
+
+
+//         const products = [
+//   {
+//     name: 'Product 1',
+//     price: 49.99,
+//     category: 'Electronics'
+//   },
+//   {
+//     name: 'Product 2',
+//     price: 29.99,
+//     category: 'Clothing'
+//   },
+//   {
+//     name: 'Product 3',
+//     price: 99.99,
+//     category: 'Home Goods'
+//   }
+// ];
+
+// for (let i = 0; i < products.length; i++) {
+//   console.log(`Name: ${products[i].name}`);
+//   console.log(`Price: ${products[i].price}`);
+//   console.log(`Category: ${products[i].category}`);
+//   console.log('---');
+// }
+
+    </script>
+</body>
+</html>

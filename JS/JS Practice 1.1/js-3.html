@@ -1,0 +1,63 @@
+<!-- Create a webpage with multiple buttons and paragraphs. Use JavaScript to change the
+text of different paragraphs based on which button is clicked. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 1.2(3)</title>
+
+    <style>
+        .container{
+            background-color: rgb(246, 183, 183);
+            display: inline-block;
+            padding-bottom: 20px;
+        }
+        .buttonClass{
+            border-color: darkcyan;
+            border-style: solid;
+            display: inline;
+        }
+
+        button:hover {
+            background-color: rgb(240, 241, 193);
+        }
+
+        #demo , #animal , #birds{
+            text-align: justify;
+            color: darkgreen;
+            font-size: large;
+        }
+
+        h2{
+            font-family: 'Times New Roman', Times, serif;
+            color: brown;
+        }
+    </style>
+
+    <script>
+        function myFunction() {
+          document.getElementById("demo").innerHTML = "Paragraph changed.";
+          document.getElementById("animal").innerHTML = "This is a dog";
+          document.getElementById("birds").innerHTML = "Black flamingo is state bird of haryana"
+
+        }
+        </script>
+</head>
+<body>
+    <div class="container">
+    <h2><b>Create webpage with multiple buttons and paragraphs..!!</b></h2>
+
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()" class="buttonClass">Button 1</button>
+
+<p id="animal">This is a cat</p>
+<button type="button" onclick="myFunction()" class="buttonClass">Button 2</button>
+
+<p id="birds">Peacock is our national bird</p>
+<button type="button" onclick="myFunction()" class="buttonClass">Button 3</button>
+</div>
+</body>
+</html>

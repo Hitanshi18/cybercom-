@@ -1,0 +1,44 @@
+<!-- Create an object to store information about a product (e.g., name, price, quantity, etc.). Write code to calculate the total cost of a specified quantity of the product. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+const product ={ 
+    name : "Product",
+    price : 10,
+    quantity : 30,
+    cost : function( price) {
+    return price * this.quantity;
+  }
+    
+};
+
+console.log("The price of the " + product.name + " is " + product.cost( product.price) );
+
+
+    // class Product {
+    //     constructor(name, price, quantity) {
+    //       this.name = name;
+    //       this.price = price;
+    //       this.quantity = quantity;
+    //     }
+        
+    //     totalCost() {
+    //       return this.price * this.quantity;
+    //     }
+    //   }
+      
+    //   const product = new Product("Product 1", 10, 5);
+    //   console.log(product.totalCost());
+    </script>
+</body>
+</html>
