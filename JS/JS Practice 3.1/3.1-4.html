@@ -10,28 +10,64 @@
 </head>
 <body>
     <script>
-         function boilWater(callback) {
-  setTimeout(() => {
-    console.log("Boiled water");
-    callback();
-  }, 3000);
-}
 
-function addTeaLeaves(callback) {
-  setTimeout(() => {
-    console.log("Add tea leaves");
-    callback();
-  }, 2000);
-}
+// using callback functions 
 
-function addMilk() {
-  console.log("Add milk");
-}
+//          function boilWater(callback) {
+//   setTimeout(() => {
+//     console.log("Boiled water");
+//     callback();
+//   }, 3000);
+// }
 
-boilWater(() => {
-  addTeaLeaves(() => {
-    addMilk();
+// function addTeaLeaves(callback) {
+//   setTimeout(() => {
+//     console.log("Add tea leaves");
+//     callback();
+//   }, 2000);
+// }
+
+// function addMilk() {
+//   console.log("Add milk");
+// }
+
+// boilWater(() => {
+//   addTeaLeaves(() => {
+//     addMilk();
+//   });
+// });
+
+
+
+// using promises
+
+
+let _funcAddWater = () => {
+  console.log("adding water");
+  return new Promise((resolve, reject) => {
+     setTimeout(() => {
+      resolve("water boiled")
+     }, 5000);
   });
+};
+
+let _funcAddTeaLeaves = () => {
+   console.log(`adding tea leaves`);
+   return new Promise((resolve, reject) => {
+     setTimeout(() => {
+       resolve(`tea leaves boiled`);
+     }, 2000);
+  });
+};
+
+let _funcAddMilk = () => {
+  console.log(`adding milk`);
+};
+
+_funcAddWater().then((response) => {
+    _funcAddTeaLeaves().then((responseFromTeaLeaves) => {
+         _funcAddMilk();
+    });
 });
     </script>
 </body>

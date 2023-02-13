@@ -21,33 +21,63 @@ output from third -->
 </head>
 <body>
     <script>
-        async function asyncFunc1() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("output from one");
-    }, 5000);
-  });
+      // using async
+
+      
+//         async function asyncFunc1() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve("output from one");
+//     }, 5000);
+//   });
+// }
+
+// async function asyncFunc2() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve("output from two");
+//     }, 10000);
+//   });
+// }
+
+// async function asyncFunc3() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve("output from three");
+//     }, 15000);
+//   });
+// }
+
+// async function runAsyncFunctions() {
+//   const output1 = await asyncFunc1();
+// }
+
+
+// using callback function
+
+function func1(func2,func3){
+    setTimeout(function(){
+        console.log("output from one");
+        func2(func3)
+    },5000)
 }
 
-async function asyncFunc2() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("output from two");
-    }, 10000);
-  });
+function func2(func3){
+    setTimeout(function(){
+        console.log("output from two");
+        func3()
+    },10000)
 }
 
-async function asyncFunc3() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("output from three");
-    }, 15000);
-  });
+function func3(){
+    setTimeout(function(){
+        console.log("output from three")
+    },15000)
 }
 
-async function runAsyncFunctions() {
-  const output1 = await asyncFunc1();
-}
+func1(func2,func3);
+
+
     </script>
 </body>
 </html>
