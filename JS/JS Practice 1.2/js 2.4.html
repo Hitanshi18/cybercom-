@@ -11,15 +11,22 @@
 </head>
 <body>
     <script>
-         function properties(person) {
+         function properties(obj) {
     return 
     {
-      Firstname : person.firstName,
-      Lastname : person.lastName,
-      Age : person.age
-
+        name: obj.name;
+        age:obj.age;
     };
 }
+const originalobj = {
+        name :  'hitanshi',
+        age : 21,
+        address : 'bhavnagar' 
+    };
+    const newobj = properties(originalobj);
+    console.log(newobj);
+
+
     </script>
 </body>
 </html>
