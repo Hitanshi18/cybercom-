@@ -1,3 +1,11 @@
+<!-- Write a JavaScript function that returns array elements larger
+than a number, Array input should be dynamic.
+Example :
+Input
+Array = [2,4,4,1,0,3], number = 3
+Output: [4,4]; -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +16,7 @@
 </head>
 <body>
     <script>
+      
          function largerThanNumber(array, number) {
   return array.filter(function(element) {
     return element > number;
@@ -19,4 +28,4 @@ let result = largerThanNumber(array, number);
 console.log(result);  
     </script>
 </body>
-</html>l
+</html>

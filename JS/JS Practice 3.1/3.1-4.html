@@ -1,0 +1,38 @@
+<!-- test exercises: preparing tea using callbackn function -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function boilWater(callback) {
+  setTimeout(() => {
+    console.log("Boiled water");
+    callback();
+  }, 3000);
+}
+
+function addTeaLeaves(callback) {
+  setTimeout(() => {
+    console.log("Add tea leaves");
+    callback();
+  }, 2000);
+}
+
+function addMilk() {
+  console.log("Add milk");
+}
+
+boilWater(() => {
+  addTeaLeaves(() => {
+    addMilk();
+  });
+});
+    </script>
+</body>
+</html>

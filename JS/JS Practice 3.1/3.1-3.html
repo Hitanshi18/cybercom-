@@ -1,0 +1,40 @@
+<!-- Case 3:
+Create a web application that contains three callbacks' functions.
+One function that contains delay of 10s, once this is executed, second
+function will start executing (with 10s delay).
+Once second function will be executed, third function will start
+executing (with 8s delay).
+Each function will have console statement stated as "X function is
+start executing" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function call1(call2,call3){
+    setTimeout(function(){
+        console.log("first function start executing")
+        call2(call3)
+    },10000)
+}
+function call2(call3){
+    setTimeout(function(){
+        console.log("second function start executing")
+        call3()
+    },10000)
+}
+function call3(){
+    setTimeout(function(){
+        console.log(" third function start executing")
+    },8000)
+}
+call1 (call2,call3);
+    </script>
+</body>
+</html>
