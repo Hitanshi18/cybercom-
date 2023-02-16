@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="E:\Cybercom\E-1\registration\registration.css ">
+    <link rel="stylesheet" href="app.css">   
+</head>
+<body>
+  <center>
+    <div id="alert">
+    <div class="container">
+      <h2><b>Registration</b></h2>
+          <input type="text" placeholder="Name" id="name" required><br>
+          <input type="Email" placeholder="Enter emailid" id="email" required><br>
+          <input type="password" placeholder="Password" id="password" required><br>
+          <input type="password" placeholder="Confirm password" id="confirmpassword" required><br>
+          <select id="Select city" name="city" required>
+            <option value="none" selected disabled hidden>Select city</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Hydrabad">Hydrabad</option>
+            </select>
+            <select id="Select state" name="state" required>
+              <option value="none" selected disabled hidden>Select city</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="AndhraPradesh">AndhraPradesh</option>
+              </select>             
+                <input type="checkbox" id="checked">Terms & Conditions <br> 
+            <button id="register" onclick="handleSubmit()">REGISTER NOW </button>
+          </div>
+    </div>
+  </div>
+    </center>
+    <script src="E:/Cybercom/E-1/registration/registration.js"></script>
+</body>
+</html>

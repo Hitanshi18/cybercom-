@@ -1,0 +1,52 @@
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 57vh;
+}
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    }
+    
+    .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    }
+    
+    .sidebar a.active {
+    background-color: #89aa04;
+    color: white;
+    }
+    
+    .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+    }
+
+    .dash{
+        padding: 4%;
+        display: flex;
+        justify-content: center;
+        background-color: #f1f1f1;
+        color: black;
+        
+        float: right;
+        background-color: #87ac44;
+        color: white;
+        padding: 3%;
+        border-radius: 2px;
+        box-shadow: 0 0 20px #ccc;
+        margin: 3%;
+        
+    }
+h2{
+    color: #89aa04;
+}

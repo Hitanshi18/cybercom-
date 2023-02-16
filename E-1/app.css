@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.dash{
+    padding: 3%;
+    width: 86vw;
+    background: #ededed;
+    text-align: center;
+}
+.main{
+    display: flex;
+}
+.panel{
+    width: 14%;
+    min-height: 100vh;
+    background: #f3961e;
+}
+.name{
+    margin-bottom: 27%;
+    box-shadow: -3px 4px 11px 4px #fff;
+}
+.name h4{
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px;
+    width: 100%;
+}
+.link{
+    display:flex;
+    flex-direction: column;
+}
+.link a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px;
+    width: 100%;
+}
+.form-group{
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #fefefe;
+    color: #f3961e;
+    font-weight: 600;
+    transition: 0.5s;
+    margin: 2%;
+}
+.btn{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #f3961e;
+    color: #fffefe;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 2%;
+}

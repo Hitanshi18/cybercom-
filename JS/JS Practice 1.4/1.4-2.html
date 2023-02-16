@@ -1,3 +1,16 @@
+<!--     Example 1:
+Input: <html><head></head><body></body></html>
+Output: Valid
+Example 2:
+Input: <html><head></head><body></boy></html>
+Output: Invalid
+Example 3:
+Input: <html><head></head><body><p>this is test element</p></body></html>
+Output: Valid
+Example 4:
+Input: <html><head></head><body><p>this is test element</br></p></body></html>
+Output: Valid -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,18 +19,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <script>
-//     Example 1:
-// Input: <html><head></head><body></body></html>
-// Output: Valid
-// Example 2:
-// Input: <html><head></head><body></boy></html>
-// Output: Invalid
-// Example 3:
-// Input: <html><head></head><body><p>this is test element</p></body></html>
-// Output: Valid
-// Example 4:
-// Input: <html><head></head><body><p>this is test element</br></p></body></html>
-// Output: Valid
     const html = "<html><head></head><body></body></html>";
     function parseHTML(html)
     {

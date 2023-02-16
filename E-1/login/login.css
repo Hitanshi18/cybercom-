@@ -1,0 +1,48 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    width: 35vw;
+    height: 60vh;
+    background: #edededc7;
+
+}
+.container .form{
+    width: 100%;
+}
+.btn{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #f3961e;
+    color: #fffefe;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 2%;
+}
+.alert{
+    display: none;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #f34848;
+    color: #fffefe;
+    font-weight: 600;
+    transition: 0.5s;
+    margin: 2%;
+    text-align: center;
+}
