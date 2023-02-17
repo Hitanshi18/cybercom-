@@ -2,13 +2,12 @@ let userRecords = [];
 
 // function to add user record to the table
 function addUserRecord() {
-  // get input values
+
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
   let date = document.getElementById("date").value;
 
-  // create user object
   let user = {
     name: name,
     email: email,
@@ -16,36 +15,69 @@ function addUserRecord() {
     date: date,
   };
 
-  // add user object to array
+
   userRecords.push(user);
 
-  // clear input fields
+
   document.getElementById("name").value = "";
   document.getElementById("email").value = "";
   document.getElementById("password").value = "";
   document.getElementById("date").value = "";
 
-  // render user table
   renderUserTable();
 }
 
-// function to delete user record from the table
 function deleteUserRecord(index) {
-  // remove user object from array
   userRecords.splice(index, 1);
-
-  // render user table
   renderUserTable();
 }
 
-// function to render user table
+function editUserRecord(index) {
+  let user = userRecords[index];
+  document.getElementById("name").value = user.name;
+  document.getElementById("email").value = user.email;
+  document.getElementById("password").value = user.password;
+  document.getElementById("date").value = user.date;
+
+  let btnSave = document.createElement("button");
+  btnSave.classList.add("btn", "btn-success");
+  btnSave.innerText = "Save";
+  btnSave.onclick = function() {
+    saveUserRecord(index);
+  };
+  let tdAction = document.getElementById("tbody").rows[index].cells[6];
+  tdAction.innerHTML = "";
+  tdAction.appendChild(btnSave);
+}
+
+function saveUserRecord(index) {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  let date = document.getElementById("date").value;
+
+  let user = {
+    name: name,
+    email: email,
+    password: password,
+    date: date,
+  };
+
+  userRecords[index] = user;
+
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("password").value = "";
+  document.getElementById("date").value = "";
+
+  renderUserTable();
+}
+
 function renderUserTable() {
   let tbody = document.getElementById("tbody");
 
-  // clear table body
   tbody.innerHTML = "";
 
-  // loop through user records and add to table
   userRecords.forEach((user, index) => {
     let tr = tbody.insertRow();
 
@@ -68,6 +100,15 @@ function renderUserTable() {
     tdAge.innerText = calculateAge(user.date);
 
     let tdAction = tr.insertCell(6);
+
+    let btnEdit = document.createElement("button");
+    btnEdit.classList.add("btn", "btn-info");
+    btnEdit.innerText = "Edit";
+    btnEdit.onclick = function() {
+      editUserRecord(index);
+    };
+    tdAction.appendChild(btnEdit);
+
     let btnDelete = document.createElement("button");
     btnDelete.classList.add("btn", "btn-danger");
     btnDelete.innerText = "Delete";
@@ -78,7 +119,6 @@ function renderUserTable() {
   });
 }
 
-// function to calculate age based on birth date
 function calculateAge(birthdate) {
   let today = new Date();
   let birthdateParts = birthdate.split("-");

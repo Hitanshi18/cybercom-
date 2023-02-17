@@ -1,3 +1,7 @@
+
+
+
+
 function handleSubmit(){
     const alert = document.getElementById("alert");
     const name = document.getElementsByName("name")[0].value;

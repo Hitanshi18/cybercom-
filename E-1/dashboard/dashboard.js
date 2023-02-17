@@ -59,3 +59,9 @@ function birthDateFind(){
     }
 }
 birthDateFind();
+
+const userName = getLoggedInUserName();
+
+const userNameElement = document.getElementById('user-name');
+
+userNameElement.textContent = userName;
