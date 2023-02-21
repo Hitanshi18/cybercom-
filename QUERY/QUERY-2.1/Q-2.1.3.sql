@@ -27,6 +27,7 @@ UPDATE salary
 SET sex = CASE WHEN sex = 'm' THEN 'f' 
                WHEN sex = 'f' THEN 'm' 
                ELSE sex 
-          END;
+          END
+          where id in(1,2,3,4);
 
 select * from Salary;
