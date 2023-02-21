@@ -1,4 +1,4 @@
-USE product_db;
+USE Student_db;
 
  CREATE TABLE  Team(
 Team_ID int auto_increment primary key,
@@ -32,7 +32,7 @@ Cricket_board int
 CREATE TABLE Player(
 Player_ID int auto_increment primary key,
 player_name varchar(256) not null,
-ODT_run int ,
+ODT_run int,
 TEST_run int,
 T20_run int,
 T20_match int,

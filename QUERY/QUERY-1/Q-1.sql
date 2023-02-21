@@ -1,7 +1,7 @@
-CREATE DATABASE IF NOT EXISTS product_db;
-USE product_db; 
- 
- CREATE TABLE categories (
+CREATE DATABASE IF NOT EXISTS Student_db;
+USE Student_db;
+
+CREATE TABLE categories (
   category_id INT PRIMARY KEY,
   category_name VARCHAR(255)
 );

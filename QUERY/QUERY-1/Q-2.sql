@@ -1,4 +1,4 @@
-USE product_db;
+USE Student_db;
 
 CREATE TABLE College (
 college_id INT PRIMARY KEY,
@@ -35,5 +35,3 @@ INSERT INTO Student
 VALUES(3 , "Hitesha" , "kamanihitesha@gmail.com" , 3 );
 
 SELECT * FROM Student ;   
-
-
