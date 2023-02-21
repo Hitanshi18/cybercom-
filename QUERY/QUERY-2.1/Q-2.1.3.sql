@@ -22,6 +22,11 @@ INSERT INTO salary
 VALUES(4, 'Hitesha' , 'f' , 24000);
 SELECT * FROM salary;
 
-UPDATE Salary 
-SET 
-    sex = IF(sex = 'm', 'f', 'm');
+
+UPDATE salary
+SET sex = CASE WHEN sex = 'm' THEN 'f' 
+               WHEN sex = 'f' THEN 'm' 
+               ELSE sex 
+          END;
+
+select * from Salary;

@@ -22,7 +22,6 @@ SELECT * FROM Person;
 CREATE TABLE Address (
   addressId INT PRIMARY KEY,
   personId INT,
-  street VARCHAR(100),
   city VARCHAR(50),
   state VARCHAR(50),
   FOREIGN KEY (personId) REFERENCES Person(personId)
@@ -31,7 +30,7 @@ INSERT INTO Address
 VALUES(1 ,1,'New york city' , 'New york');
 
 INSERT INTO Address
-VALUES(2,2,'Ambavadi','Bhavagar','Gujarat');
+VALUES(2,2,'Bhavagar','Gujarat');
 
 SELECT * FROM Address;
 
