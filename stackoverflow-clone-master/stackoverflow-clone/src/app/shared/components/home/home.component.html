@@ -1,0 +1,60 @@
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Top Questions</h2>
+        <button><a href="/ask-question">Ask Question</a></button>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let question of questions">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">{{ question.title }}</h5>
+            <p class="card-text">{{ question.description }}</p>
+            <a routerLink="/question-detail" class="btn btn-primary">View Details</a>
+          </div>
+          <div class="card-footer text-muted">
+            <button class="btn btn-link" (click)="upvoteQuestion(question)">
+              <span *ngIf="!question.upvoted">&#9650;</span>
+              <span *ngIf="question.upvoted">&#9650; Voted</span>
+            </button> -->
+            <!-- {{ question.votes }} Votes | {{ Array.isArray(question.answers) ? question.answers.length : 0 }} Answers | {{ question.views }} Views -->
+            <!-- {{ question.votes }} Votes | {{ question.answers instanceof Array ? question.answers.length : 0 }} Answers | {{ question.views }} Views -->
+            <!-- {{ question.votes }} Votes | {{ Array.isArray(question.answers) ? question.answers.length : 0 }} Answers | {{ question.views }} Views -->
+          <!-- </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->
+
+   <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="d-inline-block mr-4">Top Questions</h2>
+        <button class="btn btn-primary float-right" routerLink="/ask-question" style="margin-left: 80%;"><a href="/ask-question" class="text-white">Ask Question</a></button>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let question of questions">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">{{ question.title }}</h5>
+            <p class="card-text">{{ question.description }}</p>
+            <a routerLink="/question-detail" class="btn btn-primary">View Details</a>
+          </div>
+          <div class="card-footer text-muted">
+            <button class="btn btn-link" (click)="upvoteQuestion(question)">
+              <span *ngIf="!question.upvoted">&#9650;</span>
+              <span *ngIf="question.upvoted">&#9650; Voted</span>
+            </button>
+            <button class="btn btn-link" (click)="viewAnswers(question)">
+              {{ question.votes }} Votes | {{ question.answers?.length || 0 }} Answers | {{ question.views }} Views
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,22 @@
+<div>
+  <H2>{{Mynameis()}}
+  </H2>
+</div>
+
+<ul>
+  <li *ngFor="let obj of myObjects">
+    <p>ID: {{obj.id}}</p>
+    <p>Name: {{obj.name}}</p>
+    <p>Age: {{obj.age}}</p>
+  </li>
+</ul>
+
+
+
+
+
+
+<router-outlet>
+  <app-registration></app-registration>
+
+</router-outlet>

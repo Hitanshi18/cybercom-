@@ -1,0 +1,34 @@
+<h2>To-do Application</h2>
+<div>
+  <label for="todoInput">To-Do:</label>
+  <input id="todoInput" [(ngModel)]="todo" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <label for="category">Category:</label>
+  <select id="category" [(ngModel)]="category">
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="high">High</option>
+  </select>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <button (click)="submit()">Submit</button>
+
+  <br /><br />
+
+  <div [ngStyle]="{'color': textColor, 'background-color': bgColor}">
+    {{ todo }}
+  </div>
+  <ul>
+<li>
+    <ng-container *ngFor="let item of items" >
+      {{ item.todo }}
+    </ng-container>
+  </li>
+  </ul>
+  </div>
+
+<router-outlet>
+<app-root></app-root>
+</router-outlet>

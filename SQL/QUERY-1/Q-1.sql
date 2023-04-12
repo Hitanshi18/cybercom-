@@ -13,7 +13,6 @@ VALUES(2 , "Laptop");
 
 SELECT * FROM categories;
 
-
 CREATE TABLE products (
   product_id INT PRIMARY KEY,
   product_name VARCHAR(255),
@@ -30,7 +29,6 @@ INSERT INTO products
 VALUES (1 , "hp" , 45000);
 
 SELECT * FROM products;
-
 
 CREATE TABLE product_categories (
   product_id INT,

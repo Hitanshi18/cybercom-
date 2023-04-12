@@ -1,0 +1,36 @@
+{
+  "Register": [
+    {
+      "id": 1,
+      "username": "ram",
+      "name": "ram",
+      "email": "ram@gmail.com",
+      "password": "ram123",
+      "confirmpassword": "ram123"
+    },
+    {
+      "name": "dutt",
+      "email": "dutt@gmail.com",
+      "password": "dutt123456",
+      "confirm_password": "dutt123456",
+      "username": "dutt",
+      "id": 2
+    },
+    {
+      "name": "dutt1",
+      "email": "dutt1@gmail.com",
+      "password": "dutt123456",
+      "confirm_password": "dutt123456",
+      "username": "dutt1",
+      "id": 3
+    },
+    {
+      "name": "dutt2",
+      "email": "dutt2@gmail.com",
+      "password": "dutt123456",
+      "confirm_password": "dutt123456",
+      "username": "dutt2",
+      "id": 4
+    }
+  ]
+}

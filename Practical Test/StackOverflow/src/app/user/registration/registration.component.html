@@ -1,0 +1,39 @@
+<form class="row d-flex justify-content-center mt-5" [formGroup]="registrationForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="row g-2 justify-content-center">
+    <div class="col-md-5">
+  <label for="first_name" class="form-label">Name</label>
+  <input type="text" formControlName="name"  class="form-control" id="first_name" placeholder="Enter Name">
+  <!-- <div *ngIf="get_User_Register.first_name.touched && get_User_Register.first_name.invalid" class="text-danger col-md-5 mt-1"> -->
+  <!-- <div *ngIf="get_User_Register.first_name.errors?.['required']" class="text-danger">First Name Must Required</div> -->
+  <!-- <div *ngIf="get_User_Register.first_name.errors?.['minlength']" class="text-danger">First Name MustShould be 2 Character</div></div> -->
+</div>
+
+  <div class="col-md-5">
+    <label for="primary_email" class="form-label"> Email</label>
+    <input type="email" formControlName="email" class="form-control" id="primary_email" placeholder="Enter Email">
+    <!-- <div *ngIf="get_User_Register.primary_email.touched && get_User_Register.primary_email.invalid" class="text-danger col-md-5 mt-1"> -->
+      <!-- <div *ngIf="get_User_Register.primary_email.errors?.['required']" class="text-danger">Primary Email Must Required</div> -->
+      <!-- <div *ngIf="get_User_Register.primary_email.errors?.['email']" class="text-danger">Please Enter Valid Primary Email</div> -->
+      <!-- <div *ngIf="get_User_Register.primary_email.errors?.['pattern']" class="text-danger">Please Enter Valid Primary Email</div></div> -->
+  </div>
+</div>
+
+   
+      <div class="col-md-5">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" formControlName="password" class="form-control" id="password" placeholder="Please Enter Password">
+        <!-- <div *ngIf="get_User_Register.password.touched && get_User_Register.password.invalid" class="text-danger col-md-5 mt-1"> -->
+            <!-- <div *ngIf="get_User_Register.password.errors?.['required']" class="text-danger">Password Must Required</div> -->
+            <!-- <div *ngIf="get_User_Register.password.errors?.['minlength']" class="text-danger">Password Length must be 8</div> -->
+          </div>
+      <!-- </div> -->
+    <!-- </div> -->
+    
+
+    <div class="row d-flex justify-content-center mt-2">
+    <div class="col-md-5 text-center">  
+      <button type="submit" class="btn btn-primary col-md-5">sign in</button>
+    </div>
+    </div>
+    
+</form>

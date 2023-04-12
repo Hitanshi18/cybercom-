@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>{{ question.title }}</h2>
+        <p>{{ question.description }}</p>
+        <p>{{ question.views }} Views | {{ question.votes }} Votes | {{ answers.length }} Answers</p>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Answers</h3>
+        <hr>
+        <div *ngFor="let answer of answers">
+          <p>{{ answer.text }}</p>
+          <p>{{ answer.user }} answered {{ answer.date }}</p>
+          <hr>
+        </div>
+
+        <form (ngSubmit)="addAnswer(answerText.value, userName.value)">
+            <div class="form-group">
+              <label for="answerText">Your Answer</label>
+              <textarea class="form-control" id="answerText" rows="3" #answerText required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="userName">User Name</label>
+              <input type="text" class="form-control" id="userName" #userName required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Answer</button>
+          </form>
+      </div>
+    </div>
+  </div>
+  

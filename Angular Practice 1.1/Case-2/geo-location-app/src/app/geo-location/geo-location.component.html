@@ -1,0 +1,41 @@
+<label>Enter IP Address:</label>
+<input type="text" [(ngModel)]="ipAddress">
+<button (click)="lookup()">Lookup</button>
+
+
+<div *ngIf="geoLocation">
+  <table>
+    <tr>
+      <td>IP:</td>
+      <td>{{ geoLocation.ip }}</td>
+    </tr>
+    <tr>
+      <td>City:</td>
+      <td>{{ geoLocation.city }}</td>
+    </tr>
+    <tr>
+      <td>Region:</td>
+      <td>{{ geoLocation.region }}</td>
+    </tr>
+    <tr>
+      <td>Country:</td>
+      <td>{{ geoLocation.country }}</td>
+    </tr>
+    <tr>
+      <td>Latitude, Longitude:</td>
+      <td>{{ geoLocation.loc }}</td>
+    </tr>
+    <tr>
+      <td>Organization:</td>
+      <td>{{ geoLocation.org }}</td>
+    </tr>
+    <tr>
+      <td>Postal Code:</td>
+      <td>{{ geoLocation.postal }}</td>
+    </tr>
+    <tr>
+      <td>Timezone:</td>
+      <td>{{ geoLocation.timezone }}</td>
+    </tr>
+  </table>
+</div>

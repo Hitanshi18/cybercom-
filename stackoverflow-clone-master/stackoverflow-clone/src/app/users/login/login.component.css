@@ -1,0 +1,40 @@
+/* Center the login form vertically and horizontally */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Set a max width for the login form */
+  .form-container form {
+    max-width: 600px;
+  }
+  
+  /* Style the form title */
+  .form-container .card-title {
+    margin: 0;
+  }
+  
+  /* Add some margin to the form inputs */
+  .form-container input {
+    margin-bottom: 10px;
+  }
+  
+  /* Style the error messages */
+  .form-container .text-danger {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Style the submit button */
+  .form-container button {
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  /* Style the invalid fields */
+  .form-container input.ng-invalid.ng-touched {
+    border-color: red;
+  }
+  

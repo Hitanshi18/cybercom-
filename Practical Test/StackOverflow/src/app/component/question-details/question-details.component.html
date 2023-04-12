@@ -1,0 +1,46 @@
+ 
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>{{ question.title }}</h2>
+        <p>{{ question.description }}</p>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Answers</h4>
+        <ul>
+          <li *ngFor="let answer of question.answers">
+            <p>{{ answer.text }}</p>
+            <p>Answered by: {{ answer.user }}</p>
+            <p>Answered on: {{ answer.date }}</p>
+            <ul>
+              <li *ngFor="let comment of answer.comments">
+                <p>{{ comment.text }}</p>
+                <p>Asked by: {{ comment.user }}</p>
+                <p>Asked on: {{ comment.date }}</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Post Your Answer</h4>
+        <form (ngSubmit)="submitAnswer()" #answerForm="ngForm">
+          <div class="form-group">
+            <label for="answerText">Answer:</label>
+            <textarea class="form-control" id="answerText" name="answerText" [(ngModel)]="newAnswer.text" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="answerUser">Your Name:</label>
+            <input type="text" class="form-control" id="answerUser" name="answerUser" [(ngModel)]="newAnswer.user" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Answer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
